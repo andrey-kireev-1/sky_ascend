@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Sky Ascend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <header class="hud">
+      <div class="hud__item">Счёт: <span id="scoreValue">0</span></div>
+      <div class="hud__item">Рекорд: <span id="bestValue">0</span></div>
+    </header>
+
+    <div class="game-stage">
+      <canvas id="gameCanvas" width="360" height="640" aria-label="Игровое поле"></canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay__panel">
+          <h1 id="overlayTitle">Sky Ascend</h1>
+          <p class="overlay__text">Карабкайся выше, избегай падений и поставь рекорд!</p>
+          <p class="overlay__score">Счёт: <span id="finalScore">0</span></p>
+          <p class="overlay__score">Рекорд: <span id="finalBest">0</span></p>
+          <button id="startButton" type="button">Играть</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls" aria-label="Экранные кнопки управления">
+      <button class="control-btn" data-action="left" aria-label="Движение влево">⟵</button>
+      <button class="control-btn control-btn--primary" data-action="jump" aria-label="Прыжок вверх">⤴</button>
+      <button class="control-btn" data-action="right" aria-label="Движение вправо">⟶</button>
+    </div>
+  </div>
+
+  <script src="telegram.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
